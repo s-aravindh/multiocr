@@ -1,2 +1,2 @@
 # multiocr
-supports multiple our like tesseract, aws-textract, paddle-ocr, xor, Baidu our. changing backend is easy 
+supports multiple our like tesseract, aws-textract, paddle-ocr, xocr changing backend is easy 
