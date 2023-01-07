@@ -1,0 +1,1 @@
+from multiocr.ocr_aws_textract import AwsTextractOCR
