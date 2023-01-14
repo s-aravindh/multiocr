@@ -1,11 +1,16 @@
 from base_class import OCR
+from pytesseract import image_to_string, image_to_data, image_to_boxes, image_to_osd
 
 
+class TesseractOCR(OCR):
 
-class TesseractOCR(ABC):
+    def __init__(self, image) -> None:
+        super().__init__()
+        self.image = image
 
     def image_to_str(self):
-        pass
+        ...
+        
 
     def image_to_data(self):
         pass
