@@ -13,7 +13,7 @@ class TesseractOCR(OCR):
         
 
     def image_to_data(self):
-        pass
+        ...
 
     def image_to_json(self):
-        pass
+        ...
