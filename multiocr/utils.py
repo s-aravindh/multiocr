@@ -9,10 +9,10 @@ def draw_bounding_boxes(image_file, text_dict):
     
     # Draw a green bounding box around each word
     for v in text_dict:
-        left = v['coordinates']['left']
-        top = v['coordinates']['top']
-        right = left + v['coordinates']['width']
-        bottom = top + v['coordinates']['height']
+        left = v["coordinates"]["xmin"]
+        top = v["coordinates"]["ymin"]
+        right = v["coordinates"]["xmax"]
+        bottom = v["coordinates"]["ymax"]
         draw.rectangle((left, top, right, bottom), outline='green', width=2)
 
     # Return the image with bounding boxes drawn over the words
