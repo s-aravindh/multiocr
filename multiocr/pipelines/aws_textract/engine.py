@@ -28,9 +28,10 @@ class AwsTextractOcr(OCR):
             raise Exception(f"Error reading image file: {e}")
         
         try:
-            # response = self.client.detect_document_text(Document={'Bytes': image_bytes})
-            with open("/Users/aravindh/Documents/GitHub/multiocr/aws_response.json","r") as f:
-                response = json.loads(f.read())
+            response = self.client.detect_document_text(Document={'Bytes': image_bytes})
+            self.raw_ocr = response
+            # with open("./aws_response.json","r") as f:
+            #     response = json.loads(f.read())
         except Exception as e:
             raise Exception(f"Error detecting text in image: {e}")
         

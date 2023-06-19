@@ -1,41 +1,38 @@
-from multiocr.base_class import OCR
 import json
 import pandas as pd
-import paddleocr
-from PIL import Image
-from paddleocr import draw_ocr
-from typing import Union
+from easyocr import Reader
 
-class PaddleOcr:
-    def __init__(self, config:Union[dict, None]=None):
+class EasyOcr:
+    def __init__(self, config):
         self.config = config
-        self.ocr = paddleocr.PaddleOCR(**self.config)
+        self.ocr = Reader(**config)
 
     def text_extraction(self, image_file):
         try:
-            text = self.ocr.ocr(image_file)
-            self.raw_ocr = text
+            result = self.ocr.readtext(image_file)
+            self.raw_ocr = result
         except Exception as e:
             raise Exception(f"Error detecting text in image: {e}")
 
         text_dict = []
-        for line in text:
-            for word in line:
-                xmin = min([w[0] for w in word[0]])
-                ymin = min([w[1] for w in word[0]])
-                xmax = max([w[0] for w in word[0]])
-                ymax = max([w[1] for w in word[0]])
-                word_dict = {
-                    "text": word[1][0],
-                    "confidence": word[1][1],
-                    "coordinates":{
-                        "xmin":xmin,
-                        "ymin":ymin,
-                        "xmax":xmax,
-                        "ymax":ymax
-                        }
-                    }
-                text_dict.append(word_dict)
+        for detection in result:
+            text = detection[1]
+            confidence = detection[2]
+            xmin = int(min([w[0] for w in detection[0]]))
+            ymin = int(min([w[1] for w in detection[0]]))
+            xmax = int(max([w[0] for w in detection[0]]))
+            ymax = int(max([w[1] for w in detection[0]]))
+            word_dict = {
+                "text": text,
+                "confidence": confidence,
+                "coordinates": {
+                    "xmin": xmin,
+                    "ymin": ymin,
+                    "xmax": xmax,
+                    "ymax": ymax
+                }
+            }
+            text_dict.append(word_dict)
 
         return text_dict
 
@@ -44,27 +41,24 @@ class PaddleOcr:
             return json.dumps(text_dict)
         except Exception as e:
             raise Exception(f"Error saving output to JSON file: {e}")
-        
+
     def text_extraction_to_df(self, text_dict):
         rows = []
-        
         for v in text_dict:
             rows.append([v['text'], v['confidence'], v['coordinates']['xmin'], v['coordinates']['ymin'],
                          v['coordinates']['xmax'], v['coordinates']['ymax']])
-        
         df = pd.DataFrame(rows, columns=['text', 'confidence', 'xmin', 'ymin', 'xmax', 'ymax'])
-        
+
         try:
             return df
         except Exception as e:
             raise Exception(f"Error saving output to CSV file: {e}")
-        
+
     def extract_plain_text(self, text_dict):
         plain_text = ''
-        
         for v in text_dict:
             plain_text += v['text'] + ' '
-        
+
         try:
             return plain_text
         except Exception as e:
@@ -72,10 +66,10 @@ class PaddleOcr:
 
 if __name__ == "__main__":
     config = {
-        "lang":"en"
+        "lang_list": ["en"]
     }
     image_file = "/Users/aravindh/Documents/GitHub/multiocr/tests/data/test-european.jpg"
-    ocr = PaddleOcr(config)
+    ocr = EasyOcr(config)
     data = ocr.text_extraction(image_file)
     json_data = ocr.text_extraction_to_json(data)
     plain_text_data = ocr.extract_plain_text(data)

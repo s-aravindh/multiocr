@@ -16,10 +16,12 @@ class TesseractOcr(OCR):
     """
     def __init__(self, config:Union[dict, None]=None):
         self.config = config
+        self.config.pop("output_type")
     
     def text_extraction(self, image_file):
         try:
             text = pytesseract.image_to_data( Image.open(image_file), output_type='dict', **self.config)
+            self.raw_ocr = text
         except Exception as e:
             raise Exception(f"Error detecting text in image: {e}")
         
