@@ -78,6 +78,12 @@ plain_text = engine.extract_plain_text(text_dict)
 print()
 ```
 
+if you want to  access the output of each individual ocr engine in their own raw format, we can fetch it this way
+
+```
+raw_ocr_output = engine.engine.raw_ocr
+```
+
 **config** is the each ocr's input parameters and it should be python dictionary. if not given, it'll default to each respective libraries default parameters
 
 the input parameters for each ocr differs, and you can look at its respective repo for all allowable parameters
