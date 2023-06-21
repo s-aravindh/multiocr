@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "multiocr"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Aravindh <32878238+s-aravindh@users.noreply.github.com>"]
 readme = "README.md"
