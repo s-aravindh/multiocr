@@ -16,7 +16,7 @@ class TesseractOcr(OCR):
     """
     def __init__(self, config:Union[dict, None]=None):
         self.config = config
-        self.config.pop("output_type")
+        self.config.pop("output_type", None)
     
     def text_extraction(self, image_file):
         try:
