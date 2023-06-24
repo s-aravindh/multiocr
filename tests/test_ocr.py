@@ -8,6 +8,7 @@ image_file = "/Users/aravindh/Documents/GitHub/multiocr/tests/data/test-european
 
 
 all_ocr = [
+    # test with custom config for each ocr
     {
         "ocr_name":"tesseract",
         "config":{
@@ -34,12 +35,28 @@ all_ocr = [
         "config":{
             "lang_list": ["en"]
         }
+    },
+    # test with no configs
+    {
+        "ocr_name":"tesseract"
+    },
+    {
+        "ocr_name":"paddle_ocr"
+    },
+    {
+        "ocr_name":"aws_textract"
+    },
+    {
+        "ocr_name":"easy_ocr"
     }
 ]
 
 for ocr in all_ocr:
+    ocr_name = None
+    ocr_config = None
     ocr_name = ocr["ocr_name"]
-    ocr_config = ocr["config"]
+    if ocr.get("config"):
+        ocr_config = ocr["config"]
     engine = OcrEngine(ocr_name, ocr_config)
     
     text_dict = engine.text_extraction(image_file)

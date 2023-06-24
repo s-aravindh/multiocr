@@ -1,11 +1,16 @@
 import json
 import pandas as pd
 from easyocr import Reader
+from typing import Union
 
 class EasyOcr:
-    def __init__(self, config):
+    def __init__(self, config: Union[dict, None]=None):
         self.config = config
-        self.ocr = Reader(**config)
+        if not self.config:
+            self.config = {
+            "lang_list": ["en"]
+        }
+        self.ocr = Reader(**self.config)
 
     def text_extraction(self, image_file):
         try:

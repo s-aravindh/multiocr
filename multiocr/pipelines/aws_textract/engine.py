@@ -4,6 +4,7 @@ import pandas as pd
 import json
 from typing import Union
 from PIL import Image
+import os
 
 class AwsTextractOcr(OCR):
     """
@@ -17,6 +18,12 @@ class AwsTextractOcr(OCR):
     def __init__(self, config: Union[dict, None]=None):
 
         self.config = config
+        if not self.config:
+            self.config = {
+            "region_name":os.getenv("region_name"),
+            "aws_access_key_id":os.getenv("aws_access_key_id"),
+            "aws_secret_access_key":os.getenv("aws_secret_access_key")
+        }
         self.client = boto3.client('textract', **self.config)
     
     def text_extraction(self, image_file):
@@ -31,7 +38,7 @@ class AwsTextractOcr(OCR):
             response = self.client.detect_document_text(Document={'Bytes': image_bytes})
             self.raw_ocr = response
             # with open("./aws_response.json","r") as f:
-            #     response = json.loads(f.read())
+            #     response = json.  loads(f.read())
         except Exception as e:
             raise Exception(f"Error detecting text in image: {e}")
         
