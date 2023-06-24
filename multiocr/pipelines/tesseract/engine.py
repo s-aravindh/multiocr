@@ -43,7 +43,7 @@ class TesseractOcr(OCR):
         try:
             return json.dumps(text_dict)
         except Exception as e:
-            raise Exception(f"Error saving output to JSON file: {e}")
+            raise Exception(f"Error converting text extraction to JSON: {e}")
         
     def text_extraction_to_df(self, text_dict):
         rows = []
@@ -57,7 +57,7 @@ class TesseractOcr(OCR):
         try:
             return df
         except Exception as e:
-            raise Exception(f"Error saving output to CSV file: {e}")
+            raise Exception(f"Error converting text extraction to dataframe: {e}")
         
     def extract_plain_text(self, text_dict):
         plain_text = ''
@@ -68,7 +68,7 @@ class TesseractOcr(OCR):
         try:
             return plain_text
         except Exception as e:
-            raise Exception(f"Error saving output to plain text file: {e}")
+            raise Exception(f"Error converting text extraction to plain text: {e}")
 
 if __name__ == "__main__":
     image_file = "/Users/aravindh/Documents/GitHub/multiocr/tests/data/test-european.jpg"
