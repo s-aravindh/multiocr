@@ -88,10 +88,15 @@ raw_ocr_output = engine.engine.raw_ocr
 
 the input parameters for each ocr differs, and you can look at its respective repo for all allowable parameters
 
-Reference & Acknowlegements
+# Reference & Acknowlegements
 
 - [Pytesseract](https://github.com/madmaze/pytesseract)
 - [Tesseract](https://github.com/tesseract-ocr/tesseract)
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 - [AWS Textract](https://docs.aws.amazon.com/textract/latest/dg/what-is.html)
 - [EasyOCR](https://www.jaided.ai/easyocr/)
+
+# WIP - OCR Backends
+- [ ] MMOCR
+- [ ] Google Vision
+- [ ] Azure OCR
