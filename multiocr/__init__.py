@@ -1,0 +1,1 @@
+from multiocr.main import OcrEngine

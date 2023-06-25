@@ -1,12 +1,16 @@
 [tool.poetry]
 name = "multiocr"
-version = "0.1.0"
+version = "0.1.3"
 description = ""
 authors = ["Aravindh <32878238+s-aravindh@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
+pytesseract = "^0.3.10"
+paddlepaddle = "^2.4.2"
+paddleocr = "^2.6.1.3"
+easyocr = "^1.7.0"
 
 
 [build-system]
