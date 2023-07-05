@@ -100,3 +100,4 @@ the input parameters for each ocr differs, and you can look at its respective re
 - [ ] MMOCR
 - [ ] Google Vision
 - [ ] Azure OCR
+- [ ] DocTR
