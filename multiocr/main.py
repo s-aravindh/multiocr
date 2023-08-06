@@ -5,10 +5,12 @@ from multiocr.pipelines import EasyOcr
 from multiocr.base_class import OCR
 from typing import Union
 
-ENGINE_DICT = {"aws_textract":AwsTextractOcr, 
-               "tesseract":TesseractOcr, 
-               "paddle_ocr":PaddleOcr,
-               "easy_ocr": EasyOcr }
+ENGINE_DICT = {
+    "aws_textract":AwsTextractOcr, 
+    "tesseract":TesseractOcr, 
+    "paddle_ocr":PaddleOcr,           
+    "easy_ocr": EasyOcr 
+    }
 
 avail_ocr_backends = list(ENGINE_DICT.keys())
 
