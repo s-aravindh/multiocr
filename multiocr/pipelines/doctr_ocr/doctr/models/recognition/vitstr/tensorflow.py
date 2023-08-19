@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import tensorflow as tf
 from tensorflow.keras import Model, layers
 
-from doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
 
 from ...classification import vit_b, vit_s
 from ...utils.tensorflow import load_pretrained_params

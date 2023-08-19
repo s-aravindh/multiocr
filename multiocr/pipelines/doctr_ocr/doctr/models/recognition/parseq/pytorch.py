@@ -14,8 +14,8 @@ from torch import nn
 from torch.nn import functional as F
 from torchvision.models._utils import IntermediateLayerGetter
 
-from doctr.datasets import VOCABS
-from doctr.models.modules.transformer import MultiHeadAttention, PositionwiseFeedForward
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.transformer import MultiHeadAttention, PositionwiseFeedForward
 
 from ...classification import vit_s
 from ...utils.pytorch import load_pretrained_params

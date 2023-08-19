@@ -8,8 +8,8 @@ from typing import Any, List, Tuple, Union
 import numpy as np
 import tensorflow as tf
 
-from doctr.models.preprocessor import PreProcessor
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.models.preprocessor import PreProcessor
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from ..core import RecognitionModel
 from ._utils import remap_preds, split_crops

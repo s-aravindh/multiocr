@@ -9,9 +9,9 @@ from typing import Any, List, Tuple, Union
 import numpy as np
 import tensorflow as tf
 
-from doctr.transforms import Normalize, Resize
-from doctr.utils.multithreading import multithread_exec
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.transforms import Normalize, Resize
+from multiocr.pipelines.doctr_ocr.doctr.utils.multithreading import multithread_exec
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["PreProcessor"]
 

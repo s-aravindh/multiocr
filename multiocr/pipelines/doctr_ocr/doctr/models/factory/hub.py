@@ -15,8 +15,8 @@ from typing import Any
 
 from huggingface_hub import HfApi, HfFolder, Repository, hf_hub_download, snapshot_download
 
-from doctr import models
-from doctr.file_utils import is_tf_available, is_torch_available
+from multiocr.pipelines.doctr_ocr.doctr import models
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import is_tf_available, is_torch_available
 
 if is_torch_available():
     import torch

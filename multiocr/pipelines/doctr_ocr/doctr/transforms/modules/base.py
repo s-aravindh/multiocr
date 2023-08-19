@@ -9,7 +9,7 @@ from typing import Any, Callable, Dict, List, Tuple
 
 import numpy as np
 
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from .. import functional as F
 

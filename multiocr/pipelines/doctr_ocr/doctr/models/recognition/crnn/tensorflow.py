@@ -10,7 +10,7 @@ import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.models import Model, Sequential
 
-from doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
 
 from ...classification import mobilenet_v3_large_r, mobilenet_v3_small_r, vgg16_bn_r
 from ...utils.tensorflow import load_pretrained_params

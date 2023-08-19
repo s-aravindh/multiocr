@@ -9,7 +9,7 @@ from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union
 import numpy as np
 import tensorflow as tf
 
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from ..functional.tensorflow import _gaussian_filter, random_shadow
 

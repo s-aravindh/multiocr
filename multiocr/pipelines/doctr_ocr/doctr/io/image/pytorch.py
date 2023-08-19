@@ -11,7 +11,7 @@ import torch
 from PIL import Image
 from torchvision.transforms.functional import to_tensor
 
-from doctr.utils.common_types import AbstractPath
+from ....doctr.utils.common_types import AbstractPath
 
 __all__ = ["tensor_from_pil", "read_img_as_tensor", "decode_img_as_tensor", "tensor_from_numpy", "get_img_shape"]
 

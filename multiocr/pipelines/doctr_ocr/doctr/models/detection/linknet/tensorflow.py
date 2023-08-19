@@ -13,10 +13,10 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import Model, Sequential, layers
 
-from doctr.file_utils import CLASS_NAME
-from doctr.models.classification import resnet18, resnet34, resnet50
-from doctr.models.utils import IntermediateLayerGetter, conv_sequence, load_pretrained_params
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import CLASS_NAME
+from multiocr.pipelines.doctr_ocr.doctr.models.classification import resnet18, resnet34, resnet50
+from multiocr.pipelines.doctr_ocr.doctr.models.utils import IntermediateLayerGetter, conv_sequence, load_pretrained_params
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from .base import LinkNetPostProcessor, _LinkNet
 

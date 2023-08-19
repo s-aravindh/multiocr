@@ -8,7 +8,7 @@ from typing import List
 import cv2
 import numpy as np
 
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["DetectionPostProcessor"]
 

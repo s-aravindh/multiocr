@@ -9,8 +9,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-from doctr.models.preprocessor import PreProcessor
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.models.preprocessor import PreProcessor
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["CropOrientationPredictor"]
 

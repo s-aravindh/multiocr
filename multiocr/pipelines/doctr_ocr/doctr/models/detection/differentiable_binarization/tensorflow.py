@@ -14,9 +14,9 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.applications import ResNet50
 
-from doctr.file_utils import CLASS_NAME
-from doctr.models.utils import IntermediateLayerGetter, conv_sequence, load_pretrained_params
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import CLASS_NAME
+from multiocr.pipelines.doctr_ocr.doctr.models.utils import IntermediateLayerGetter, conv_sequence, load_pretrained_params
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from ...classification import mobilenet_v3_large
 from .base import DBPostProcessor, _DBNet

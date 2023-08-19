@@ -6,7 +6,7 @@
 
 from typing import Any, Dict, Optional
 
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["BaseModel"]
 

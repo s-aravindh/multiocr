@@ -15,10 +15,10 @@ from xml.etree.ElementTree import SubElement
 import matplotlib.pyplot as plt
 import numpy as np
 
-import doctr
-from doctr.utils.common_types import BoundingBox
-from doctr.utils.geometry import resolve_enclosing_bbox, resolve_enclosing_rbbox
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr import doctr
+from multiocr.pipelines.doctr_ocr.doctr.utils.common_types import BoundingBox
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import resolve_enclosing_bbox, resolve_enclosing_rbbox
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["Element", "Word", "Artefact", "Line", "Prediction", "Block", "Page", "KIEPage", "Document"]
 

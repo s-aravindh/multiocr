@@ -12,8 +12,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import Model, layers
 
-from doctr.datasets import VOCABS
-from doctr.models.modules.transformer import MultiHeadAttention, PositionwiseFeedForward
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.transformer import MultiHeadAttention, PositionwiseFeedForward
 
 from ...classification import vit_s
 from ...utils.tensorflow import load_pretrained_params

@@ -9,11 +9,11 @@ import numpy as np
 import torch
 from torch import nn
 
-from doctr.io.elements import Document
-from doctr.models._utils import estimate_orientation, get_language
-from doctr.models.detection.predictor import DetectionPredictor
-from doctr.models.recognition.predictor import RecognitionPredictor
-from doctr.utils.geometry import rotate_boxes, rotate_image
+from multiocr.pipelines.doctr_ocr.doctr.io.elements import Document
+from multiocr.pipelines.doctr_ocr.doctr.models._utils import estimate_orientation, get_language
+from multiocr.pipelines.doctr_ocr.doctr.models.detection.predictor import DetectionPredictor
+from multiocr.pipelines.doctr_ocr.doctr.models.recognition.predictor import RecognitionPredictor
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import rotate_boxes, rotate_image
 
 from .base import _OCRPredictor
 

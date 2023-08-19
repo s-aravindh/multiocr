@@ -12,8 +12,8 @@ from torch import nn
 from torchvision.transforms import functional as F
 from torchvision.transforms import transforms as T
 
-from doctr.transforms import Resize
-from doctr.utils.multithreading import multithread_exec
+from multiocr.pipelines.doctr_ocr.doctr.transforms import Resize
+from multiocr.pipelines.doctr_ocr.doctr.utils.multithreading import multithread_exec
 
 __all__ = ["PreProcessor"]
 

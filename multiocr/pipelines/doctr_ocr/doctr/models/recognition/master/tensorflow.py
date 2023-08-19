@@ -9,9 +9,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import tensorflow as tf
 from tensorflow.keras import Model, layers
 
-from doctr.datasets import VOCABS
-from doctr.models.classification import magc_resnet31
-from doctr.models.modules.transformer import Decoder, PositionalEncoding
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.models.classification import magc_resnet31
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.transformer import Decoder, PositionalEncoding
 
 from ...utils.tensorflow import load_pretrained_params
 from .base import _MASTER, _MASTERPostProcessor

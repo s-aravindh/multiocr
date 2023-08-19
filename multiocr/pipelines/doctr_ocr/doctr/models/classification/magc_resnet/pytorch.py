@@ -12,7 +12,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import torch
 from torch import nn
 
-from doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
 
 from ...utils.pytorch import load_pretrained_params
 from ..resnet.pytorch import ResNet

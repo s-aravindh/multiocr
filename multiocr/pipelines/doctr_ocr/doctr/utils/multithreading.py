@@ -9,7 +9,7 @@ import os
 from multiprocessing.pool import ThreadPool
 from typing import Any, Callable, Iterable, Iterator, Optional
 
-from doctr.file_utils import ENV_VARS_TRUE_VALUES
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import ENV_VARS_TRUE_VALUES
 
 __all__ = ["multithread_exec"]
 

@@ -10,7 +10,7 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.utils import img_to_array
 
-from doctr.utils.common_types import AbstractPath
+from multiocr.pipelines.doctr_ocr.doctr.utils.common_types import AbstractPath
 
 __all__ = ["tensor_from_pil", "read_img_as_tensor", "decode_img_as_tensor", "tensor_from_numpy", "get_img_shape"]
 

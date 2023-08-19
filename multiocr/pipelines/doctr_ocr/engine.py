@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from PIL import Image
 from typing import Union
-from doctr.models import ocr_predictor
+from .doctr.models import ocr_predictor
 import numpy as np
 
 class DoctrOCR:

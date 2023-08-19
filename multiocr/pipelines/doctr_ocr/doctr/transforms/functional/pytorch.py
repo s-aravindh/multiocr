@@ -10,7 +10,7 @@ import numpy as np
 import torch
 from torchvision.transforms import functional as F
 
-from doctr.utils.geometry import rotate_abs_geoms
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import rotate_abs_geoms
 
 from .base import create_shadow_mask, crop_boxes
 

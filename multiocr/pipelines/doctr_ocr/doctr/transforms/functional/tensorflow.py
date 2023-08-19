@@ -11,7 +11,7 @@ from typing import Iterable, Optional, Tuple, Union
 import numpy as np
 import tensorflow as tf
 
-from doctr.utils.geometry import compute_expanded_shape, rotate_abs_geoms
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import compute_expanded_shape, rotate_abs_geoms
 
 from .base import create_shadow_mask, crop_boxes
 

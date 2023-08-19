@@ -11,8 +11,8 @@ from torch import nn
 from torch.nn import functional as F
 from torchvision.models._utils import IntermediateLayerGetter
 
-from doctr.file_utils import CLASS_NAME
-from doctr.models.classification import resnet18, resnet34, resnet50
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import CLASS_NAME
+from multiocr.pipelines.doctr_ocr.doctr.models.classification import resnet18, resnet34, resnet50
 
 from ...utils import load_pretrained_params
 from .base import LinkNetPostProcessor, _LinkNet

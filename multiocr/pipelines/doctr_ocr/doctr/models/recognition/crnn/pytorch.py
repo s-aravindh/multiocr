@@ -11,7 +11,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from doctr.datasets import VOCABS, decode_sequence
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS, decode_sequence
 
 from ...classification import mobilenet_v3_large_r, mobilenet_v3_small_r, vgg16_bn_r
 from ...utils.pytorch import load_pretrained_params

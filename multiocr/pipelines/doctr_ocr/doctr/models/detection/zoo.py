@@ -5,7 +5,7 @@
 
 from typing import Any, List
 
-from doctr.file_utils import is_tf_available, is_torch_available
+from multiocr.pipelines.doctr_ocr.doctr.file_utils import is_tf_available, is_torch_available
 
 from .. import detection
 from ..preprocessor import PreProcessor

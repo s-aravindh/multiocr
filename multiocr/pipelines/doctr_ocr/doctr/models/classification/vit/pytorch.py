@@ -9,9 +9,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import torch
 from torch import nn
 
-from doctr.datasets import VOCABS
-from doctr.models.modules.transformer import EncoderBlock
-from doctr.models.modules.vision_transformer.pytorch import PatchEmbedding
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.transformer import EncoderBlock
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.vision_transformer.pytorch import PatchEmbedding
 
 from ...utils.pytorch import load_pretrained_params
 

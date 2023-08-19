@@ -12,7 +12,7 @@ import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
-from doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
 
 from ...utils import load_pretrained_params
 from ..resnet.tensorflow import ResNet

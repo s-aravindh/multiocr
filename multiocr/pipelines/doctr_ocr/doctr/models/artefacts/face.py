@@ -8,7 +8,7 @@ from typing import List, Tuple
 import cv2
 import numpy as np
 
-from doctr.utils.repr import NestedObject
+from ....doctr.utils.repr import NestedObject
 
 __all__ = ["FaceDetector"]
 

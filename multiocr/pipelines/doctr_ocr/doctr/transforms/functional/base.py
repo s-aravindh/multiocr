@@ -8,7 +8,7 @@ from typing import Tuple, Union
 import cv2
 import numpy as np
 
-from doctr.utils.geometry import rotate_abs_geoms
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import rotate_abs_geoms
 
 __all__ = ["crop_boxes", "create_shadow_mask"]
 

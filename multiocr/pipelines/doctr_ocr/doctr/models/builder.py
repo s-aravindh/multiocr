@@ -9,9 +9,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 from scipy.cluster.hierarchy import fclusterdata
 
-from doctr.io.elements import Block, Document, KIEDocument, KIEPage, Line, Page, Prediction, Word
-from doctr.utils.geometry import estimate_page_angle, resolve_enclosing_bbox, resolve_enclosing_rbbox, rotate_boxes
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.io.elements import Block, Document, KIEDocument, KIEPage, Line, Page, Prediction, Word
+from multiocr.pipelines.doctr_ocr.doctr.utils.geometry import estimate_page_angle, resolve_enclosing_bbox, resolve_enclosing_rbbox, rotate_boxes
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 __all__ = ["DocumentBuilder"]
 

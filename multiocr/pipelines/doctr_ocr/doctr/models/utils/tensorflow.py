@@ -12,7 +12,7 @@ import tensorflow as tf
 import tf2onnx
 from tensorflow.keras import Model, layers
 
-from doctr.utils.data import download_from_url
+from multiocr.pipelines.doctr_ocr.doctr.utils.data import download_from_url
 
 logging.getLogger("tensorflow").setLevel(logging.DEBUG)
 

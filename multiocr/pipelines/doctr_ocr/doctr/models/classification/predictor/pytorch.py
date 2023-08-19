@@ -9,8 +9,8 @@ import numpy as np
 import torch
 from torch import nn
 
-from doctr.models.preprocessor import PreProcessor
-from doctr.models.utils import set_device_and_dtype
+from multiocr.pipelines.doctr_ocr.doctr.models.preprocessor import PreProcessor
+from multiocr.pipelines.doctr_ocr.doctr.models.utils import set_device_and_dtype
 
 __all__ = ["CropOrientationPredictor"]
 

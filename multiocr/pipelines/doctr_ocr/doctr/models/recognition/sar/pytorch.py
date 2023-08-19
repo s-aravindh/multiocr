@@ -11,7 +11,7 @@ from torch import nn
 from torch.nn import functional as F
 from torchvision.models._utils import IntermediateLayerGetter
 
-from doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
 
 from ...classification import resnet31
 from ...utils.pytorch import load_pretrained_params

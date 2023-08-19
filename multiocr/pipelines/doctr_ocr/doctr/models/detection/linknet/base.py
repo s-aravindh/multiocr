@@ -12,7 +12,7 @@ import numpy as np
 import pyclipper
 from shapely.geometry import Polygon
 
-from doctr.models.core import BaseModel
+from multiocr.pipelines.doctr_ocr.doctr.models.core import BaseModel
 
 from ..core import DetectionPostProcessor
 

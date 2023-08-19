@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Optional
 
 from torchvision.models import mobilenetv3
 
-from doctr.datasets import VOCABS
+from .....doctr.datasets import VOCABS
 
 from ...utils import load_pretrained_params
 

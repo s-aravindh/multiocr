@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional
 from torch import nn
 from torchvision.models import vgg as tv_vgg
 
-from doctr.datasets import VOCABS
+from .....doctr.datasets import VOCABS
 
 from ...utils import load_pretrained_params
 

@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Optional, Tuple
 import tensorflow as tf
 from tensorflow.keras import Model, Sequential, layers
 
-from doctr.datasets import VOCABS
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from ...classification import resnet31
 from ...utils.tensorflow import load_pretrained_params

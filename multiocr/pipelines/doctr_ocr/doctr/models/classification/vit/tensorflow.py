@@ -9,10 +9,10 @@ from typing import Any, Dict, Optional, Tuple
 import tensorflow as tf
 from tensorflow.keras import Sequential, layers
 
-from doctr.datasets import VOCABS
-from doctr.models.modules.transformer import EncoderBlock
-from doctr.models.modules.vision_transformer.tensorflow import PatchEmbedding
-from doctr.utils.repr import NestedObject
+from multiocr.pipelines.doctr_ocr.doctr.datasets import VOCABS
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.transformer import EncoderBlock
+from multiocr.pipelines.doctr_ocr.doctr.models.modules.vision_transformer.tensorflow import PatchEmbedding
+from multiocr.pipelines.doctr_ocr.doctr.utils.repr import NestedObject
 
 from ...utils import load_pretrained_params
 
