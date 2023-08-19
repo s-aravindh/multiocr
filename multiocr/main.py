@@ -2,14 +2,16 @@ from multiocr.pipelines import AwsTextractOcr
 from multiocr.pipelines import TesseractOcr
 from multiocr.pipelines import PaddleOcr
 from multiocr.pipelines import EasyOcr
+from multiocr.pipelines import DoctrOCR
 from multiocr.base_class import OCR
 from typing import Union
 
 ENGINE_DICT = {
     "aws_textract":AwsTextractOcr, 
     "tesseract":TesseractOcr, 
-    "paddle_ocr":PaddleOcr,           
-    "easy_ocr": EasyOcr 
+    "paddle_ocr":PaddleOcr,
+    "easy_ocr": EasyOcr,
+    "doctr_ocr":DoctrOCR 
     }
 
 avail_ocr_backends = list(ENGINE_DICT.keys())
