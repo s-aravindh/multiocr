@@ -11,6 +11,7 @@ pip install multiocr
 - PaddleOCR
 - Aws Textract
 - EasyOCR
+- Doctr-Ocr
 
 the output for all ocr backend will be simillar
 
@@ -75,7 +76,19 @@ text_dict = engine.text_extraction(image_file)
 json = engine.text_extraction_to_json(text_dict)
 df = engine.text_extraction_to_df(text_dict)
 plain_text = engine.extract_plain_text(text_dict)
-print()
+```
+
+**TrOCR**
+```python
+from multiocr import OcrEngine
+
+image_file = "path/to/image.jpg"
+engine = OcrEngine("doctr_ocr")
+text_dict = engine.text_extraction(image_file)
+json = engine.text_extraction_to_json(text_dict)
+df = engine.text_extraction_to_df(text_dict)
+plain_text = engine.extract_plain_text(text_dict)
+
 ```
 
 if you want to  access the output of each individual ocr engine in their own raw format, we can fetch it this way
@@ -95,6 +108,7 @@ the input parameters for each ocr differs, and you can look at its respective re
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 - [AWS Textract](https://docs.aws.amazon.com/textract/latest/dg/what-is.html)
 - [EasyOCR](https://www.jaided.ai/easyocr/)
+- [Doctr-Ocr](https://github.com/mindee/doctr)
 
 # WIP - OCR Backends
 - [ ] MMOCR

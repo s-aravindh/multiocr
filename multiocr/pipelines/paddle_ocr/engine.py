@@ -3,7 +3,6 @@ import json
 import pandas as pd
 import paddleocr
 from PIL import Image
-from paddleocr import draw_ocr
 from typing import Union
 
 class PaddleOcr:
